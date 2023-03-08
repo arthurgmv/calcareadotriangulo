@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--Criado por Arthur Gabriel, ADS Facens https://github.com/arthurgmv-->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Triângulo </title>
+
+    <style>
+        body {background-color: rgba(38, 198, 247, 0.616);}
+        div {background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            width: 500px;
+        }
+    </style>
+
+</head>
+<body>
+<div><h1>Digite os dados de seu triângulo</h1>
+<h3>Altura: <input type="number" id="altura"></h3>
+<h3>Base: <input type="number" id="base"> </h3>
+<input type="button" value="Calcular"></div>
+
+    
+<script>
+    var alturaInput = document.getElementById('altura');
+    var baseInput = document.getElementById('base');
+    var calcularBtn = document.querySelector('input[type="button"]');
+    var resultado = document.createElement('p');
+
+    function calcularArea() {
+        var altura = parseFloat(alturaInput.value);
+        var base = parseFloat(baseInput.value);
+        var area = (base * altura) / 2;
+      
+        resultado.textContent = `A área do triângulo é ${area}.`
+    }
+    calcularBtn.addEventListener('click', calcularArea);
+    document.body.appendChild(resultado);
+
+</script>    
+</body>
+</html>
